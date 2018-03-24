@@ -9,7 +9,6 @@ RUN apk update \
     && apk upgrade \
     && apk add bash curl git \
     && git clone https://github.com/rdcaldwell/SimianArmy.git . \
-    && git checkout -qf $SIMIANARMY_VERSION \
     && ./gradlew build --no-daemon \
     && curl -fsSL https://github.com/kelseyhightower/confd/releases/download/v${CONFD_VERSION}/confd-${CONFD_VERSION}-linux-amd64 -o /usr/local/bin/confd \
     && chmod +x /usr/local/bin/confd
