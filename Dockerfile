@@ -1,7 +1,5 @@
 FROM openjdk:8-alpine
 
-MAINTAINER Mathias Lafeldt <mathias.lafeldt@gmail.com>
-
 ENV SIMIANARMY_VERSION v2.5.3
 ENV CONFD_VERSION      0.13.0
 

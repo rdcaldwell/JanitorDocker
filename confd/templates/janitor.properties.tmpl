@@ -11,7 +11,7 @@ simianarmy.janitor.resources.sdb.domain = {{getv "/simianarmy/janitor/resources/
 simianarmy.calendar.isMonkeyTime = {{getv "/simianarmy/calendar/ismonkeytime" "true"}}
 {{end -}}
 
-simianarmy.janitor.enabledResources = {{getv "/simianarmy/janitor/enabledresources" "Instance, ASG, EBS_Volume, EBS_Snapshot, Launch_Config"}}
+simianarmy.janitor.enabledResources = {{getv "/simianarmy/janitor/enabledresources" "Instance"}}
 
 simianarmy.janitor.notification.sourceEmail = {{getv "/simianarmy/janitor/notification/sourceemail" "foo@bar.com"}}
 
@@ -33,7 +33,7 @@ simianarmy.janitor.rule.orphanedInstanceRule.opsworks.parentage = {{getv "/simia
 
 simianarmy.janitor.rule.untaggedRule.enabled = {{getv "/simianarmy/janitor/rule/untaggedrule/enabled" "false"}}
 simianarmy.janitor.rule.untaggedRule.requiredTags = {{getv "/simianarmy/janitor/rule/untaggedrule/requiredtags" "owner, purpose, project"}}
-simianarmy.janitor.rule.untaggedRule.resources = {{getv "/simianarmy/janitor/rule/untaggedrule/resources" "Instance, ASG, EBS_Volume, EBS_Snapshot"}}
+simianarmy.janitor.rule.untaggedRule.resources = {{getv "/simianarmy/janitor/rule/untaggedrule/resources" "Instance"}}
 simianarmy.janitor.rule.untaggedRule.retentionDaysWithOwner = {{getv "/simianarmy/janitor/rule/untaggedrule/retentiondayswithowner" "2"}}
 simianarmy.janitor.rule.untaggedRule.retentionDaysWithoutOwner = {{getv "/simianarmy/janitor/rule/untaggedrule/retentiondayswithoutowner" "2"}}
 
