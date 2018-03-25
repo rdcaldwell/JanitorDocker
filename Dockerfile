@@ -11,6 +11,8 @@ RUN apk update \
     && ./gradlew build --no-daemon \
     && curl -fsSL https://github.com/kelseyhightower/confd/releases/download/v${CONFD_VERSION}/confd-${CONFD_VERSION}-linux-amd64 -o /usr/local/bin/confd \
     && chmod +x /usr/local/bin/confd
+    && sudo echo "America/New_York" > /etc/timezone
+    && sudo dpkg-reconfigure -f noninteractive tzdata
 
 COPY confd/ /etc/confd
 
