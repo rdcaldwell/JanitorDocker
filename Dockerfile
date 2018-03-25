@@ -1,6 +1,5 @@
 FROM openjdk:8-alpine
 
-ENV SIMIANARMY_VERSION v2.5.3
 ENV CONFD_VERSION      0.13.0
 
 WORKDIR /simianarmy
