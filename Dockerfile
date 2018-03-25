@@ -1,7 +1,6 @@
 FROM openjdk:8-alpine
 
 ENV CONFD_VERSION      0.13.0
-ENV TZ=America/New_York
 
 WORKDIR /simianarmy
 
@@ -12,7 +11,6 @@ RUN apk update \
     && ./gradlew build --no-daemon \
     && curl -fsSL https://github.com/kelseyhightower/confd/releases/download/v${CONFD_VERSION}/confd-${CONFD_VERSION}-linux-amd64 -o /usr/local/bin/confd \
     && chmod +x /usr/local/bin/confd
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 COPY confd/ /etc/confd
 
